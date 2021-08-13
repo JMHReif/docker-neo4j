@@ -22,7 +22,18 @@ You can build the image on your local machine with the following command:
 
 [source,shell]
 ----
+cd docker/
+
 docker build . -t <project>
 ----
 
 *Note:* <project> in the above command is the repository you are referencing. If using the arm64 architecture, you can put `jmreif/neo4j-arm64`. If not on arm64 architecture, you can put `neo4j:4.3`.
+
+To run the container, execute the following command in the root directory:
+
+[source,shell]
+----
+./runNeo4j.sh
+----
+
+You can run a `docker ps` at the command line to verify the container is still running.
