@@ -1,0 +1,28 @@
+= Docker image for Neo4j on Apple Silicon
+
+This image is a build of Neo4j's arm64 experimental image (runs on Apple M1 - silicon chip).
+
+If using another architecture, you can open the `Dockerfile` in this repository and substitute the 3rd line (`FROM`) with the below code:
+
+[source,text]
+----
+FROM neo4j:4.3.3
+----
+
+You will also need to change the 10th line in the `runNeo4j.sh` script to the following:
+
+[source,shell]
+----
+neo4j:4.3
+----
+
+== Building and running the image
+
+You can build the image on your local machine with the following command:
+
+[source,shell]
+----
+docker build . -t <project>
+----
+
+*Note:* <project> in the above command is the repository you are referencing. If using the arm64 architecture, you can put `jmreif/neo4j-arm64`. If not on arm64 architecture, you can put `neo4j:4.3`.

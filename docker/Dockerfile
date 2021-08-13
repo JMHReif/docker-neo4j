@@ -1,11 +1,11 @@
 #pull base image
 #----------------
-FROM neo4j:3.5
+FROM neo4j/neo4j-arm64-experimental:4.3.3-arm64
 
 #author
 #-------
-MAINTAINER Jennifer Reif <jennifer@thehecklers.org,@JMHReif>
+LABEL org.opencontainers.image.authors="Jennifer Reif,jennifer@thehecklers.org,@JMHReif"
 
 #build the container
 #--------------------
-EXPOSE 7474 7687
+EXPOSE 7474 7473 7687
