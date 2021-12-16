@@ -1,20 +1,8 @@
-= Docker image for Neo4j on Apple Silicon
+= Docker image for Neo4j
 
-This image is a build of Neo4j's arm64 experimental image (runs on Apple M1 - silicon chip).
+This image is a build of Neo4j's Docker image.
 
-If using another architecture, you can open the `Dockerfile` in this repository and substitute the 3rd line (`FROM`) with the below code:
-
-[source,text]
-----
-FROM neo4j:4.3.3
-----
-
-You will also need to change the 10th line in the `runNeo4j.sh` script to the following:
-
-[source,shell]
-----
-neo4j:4.3
-----
+_*Note:* As of Neo4j version 4.4+, Neo4j's official image supports both amd64 (Intel chip) and arm64 (Apple silicon chip) architectures (see `OS/ARCH` for each tag). If you are using Neo4j prior to v4.4, then you will need to use the https://hub.docker.com/r/neo4j/neo4j-arm64-experimental/tags[neo4j/neo4j-arm64-experimental^] DockerHub repository and alter the Dockerfile and runNeo4j.sh script to pull that image._
 
 == Building and running the image
 
@@ -27,7 +15,7 @@ cd docker/
 docker build . -t <project>
 ----
 
-*Note:* <project> in the above command is the repository you are referencing. If using the arm64 architecture, you can put `jmreif/neo4j-arm64`. If not on arm64 architecture, you can put `neo4j:4.3`.
+_*Note:* <project> in the above command is the repository you are referencing. If using my build of Neo4j's image, you can put `jmreif/neo4j`. If you want to build straight from Neo4j's image, you can put `neo4j:4.4.1`. Both should yield the same results, as my build doesn't make changes to Neo4j's image._
 
 To run the container, execute the following command in the root directory:
 

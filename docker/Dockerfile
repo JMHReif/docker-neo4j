@@ -1,6 +1,6 @@
 #pull base image
 #----------------
-FROM neo4j/neo4j-arm64-experimental:4.3.3-arm64
+FROM neo4j:4.4.1
 
 #author
 #-------

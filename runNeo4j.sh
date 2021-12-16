@@ -7,5 +7,5 @@ docker run \
     -v $HOME/Projects/docker/logs/neo4j:/logs \
     -v $HOME/Projects/docker/data/neo4j/import:/import \
     -v $HOME/Projects/docker/data/neo4j/plugins:/plugins \
-    jmreif/neo4j-arm64
+    jmreif/neo4j
 docker ps
