@@ -1,6 +1,6 @@
 #pull base image
 #----------------
-FROM neo4j:4.4.1
+FROM neo4j:5.18.1
 
 #author
 #-------
