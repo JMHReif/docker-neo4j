@@ -1,10 +1,10 @@
 #pull base image
 #----------------
-FROM neo4j:5.18.1
+FROM neo4j:5.22.0
 
 #author
 #-------
-LABEL org.opencontainers.image.authors="Jennifer Reif,jennifer@thehecklers.org,@JMHReif"
+LABEL org.opencontainers.image.authors="Jennifer Reif,jennifer.reif@neo4j.com,jmhreif.com"
 
 #build the container
 #--------------------

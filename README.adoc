@@ -15,7 +15,7 @@ cd docker/
 docker build . -t <project>
 ----
 
-_*Note:* <project> in the above command is the repository you are referencing. If using my build of Neo4j's image, you can put `jmreif/neo4j`. If you want to build straight from Neo4j's image, you can put `neo4j:4.4.1`. Both should yield the same results, as my build doesn't make changes to Neo4j's image._
+_*Note:* <project> in the above command is the repository you are referencing. If using my build of Neo4j's image, you can put `jenniferreif232/neo4j`. If you want to build straight from Neo4j's image, you can put `neo4j:5.22.0`. Both should yield the same results, as my build doesn't make changes to Neo4j's image._
 
 To run the container, execute the following command in the root directory:
 
